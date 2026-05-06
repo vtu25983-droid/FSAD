@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusHub - Academic Event Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <div class="logo-icon">🎓</div>
+    <span>CampusHub</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:10px;" id="authNavWrap"></div>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-particles"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🎉 Spring Semester 2026 Events Are Live</div>
+    <h1>Your Campus.<br><span class="highlight">Your Events.</span><br>Your Story.</h1>
+    <p>Discover, register, and participate in exciting academic events, competitions, cultural fests, and career opportunities on campus.</p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="window.location.href='events.html'">Explore Events →</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="num">50+</div>
+        <div class="label">Events This Semester</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">5K+</div>
+        <div class="label">Students Registered</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">20+</div>
+        <div class="label">Departments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" style="background: var(--dark2);">
+  <div class="section-header">
+    <div class="section-tag">Why CampusHub</div>
+    <h2>Everything You Need in <span>One Place</span></h2>
+    <p>From discovery to registration, we've got you covered.</p>
+  </div>
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1.5rem; max-width:1100px; margin:0 auto;">
+    <div class="event-card" style="cursor:default; padding:1.5rem;">
+      <div style="font-size:2.5rem; margin-bottom:1rem;">🔍</div>
+      <h3 style="margin-bottom:0.5rem; color:white;">Discover Events</h3>
+      <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6;">Browse all campus events by category, date, or keyword. Never miss what matters to you.</p>
+    </div>
+    <div class="event-card" style="cursor:default; padding:1.5rem;">
+      <div style="font-size:2.5rem; margin-bottom:1rem;">⚡</div>
+      <h3 style="margin-bottom:0.5rem; color:white;">Instant Registration</h3>
+      <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6;">Register for events in seconds. Real-time seat availability so you always know your spot is secured.</p>
+    </div>
+    <div class="event-card" style="cursor:default; padding:1.5rem;">
+      <div style="font-size:2.5rem; margin-bottom:1rem;">📊</div>
+      <h3 style="margin-bottom:0.5rem; color:white;">Admin Dashboard</h3>
+      <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6;">Organizers can add events, track registrations, and manage capacity all from one dashboard.</p>
+    </div>
+    <div class="event-card" style="cursor:default; padding:1.5rem;">
+      <div style="font-size:2.5rem; margin-bottom:1rem;">🔔</div>
+      <h3 style="margin-bottom:0.5rem; color:white;">Live Updates</h3>
+      <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6;">Event data syncs live with the database. Seat counts update in real time as students register.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-tag">Categories</div>
+    <h2>Events for <span>Every Interest</span></h2>
+  </div>
+  <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; max-width:900px; margin:0 auto;">
+    <a href="events.html?cat=Technology" style="display:flex;align-items:center;gap:10px;padding:14px 24px;background:rgba(108,99,255,0.1);border:2px solid rgba(108,99,255,0.2);border-radius:12px;transition:all 0.3s;color:var(--text);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">💻 Technology</a>
+    <a href="events.html?cat=Cultural" style="display:flex;align-items:center;gap:10px;padding:14px 24px;background:rgba(255,101,132,0.1);border:2px solid rgba(255,101,132,0.2);border-radius:12px;transition:all 0.3s;color:var(--text);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">🎭 Cultural</a>
+    <a href="events.html?cat=Competition" style="display:flex;align-items:center;gap:10px;padding:14px 24px;background:rgba(255,165,0,0.1);border:2px solid rgba(255,165,0,0.2);border-radius:12px;transition:all 0.3s;color:var(--text);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">🏆 Competition</a>
+    <a href="events.html?cat=Career" style="display:flex;align-items:center;gap:10px;padding:14px 24px;background:rgba(67,233,123,0.1);border:2px solid rgba(67,233,123,0.2);border-radius:12px;transition:all 0.3s;color:var(--text);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">💼 Career</a>
+    <a href="events.html?cat=Academic" style="display:flex;align-items:center;gap:10px;padding:14px 24px;background:rgba(56,249,215,0.1);border:2px solid rgba(56,249,215,0.2);border-radius:12px;transition:all 0.3s;color:var(--text);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">📚 Academic</a>
+    <a href="events.html?cat=Sports" style="display:flex;align-items:center;gap:10px;padding:14px 24px;background:rgba(255,87,34,0.1);border:2px solid rgba(255,87,34,0.2);border-radius:12px;transition:all 0.3s;color:var(--text);" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">⚽ Sports</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background: var(--dark2); text-align:center;">
+  <div style="max-width:600px; margin:0 auto;">
+    <div style="font-size:3rem; margin-bottom:1rem;">🚀</div>
+    <h2 style="font-size:2rem; font-weight:800; margin-bottom:1rem;">Ready to Get Involved?</h2>
+    <p style="color:var(--text-muted); margin-bottom:2rem; line-height:1.7;">Join thousands of students who are making the most of their campus life. Your next great experience is just one click away.</p>
+    <button class="btn-primary" onclick="window.location.href='events.html'" style="font-size:1.05rem; padding:16px 40px;">Browse All Events →</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">🎓 <span>CampusHub</span></div>
+    <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">Academic Campus Event & Registration Portal</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+    </div>
+    <p class="footer-copy">© 2026 CampusHub. Built with HTML, CSS, JS & PHP/MySQL (XAMPP)</p>
+  </div>
+</footer>
+
+<div id="toastContainer" class="toast-container"></div>
+
+<!-- AUTH MODAL -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal" style="max-width:460px;">
+    <div class="modal-header">
+      <h2>Welcome to CampusHub 🎓</h2>
+      <button class="modal-close" onclick="closeAuthModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" data-tab="signin">Sign In</button>
+        <button class="auth-tab-btn" data-tab="signup">Sign Up</button>
+      </div>
+      <!-- SIGN IN -->
+      <form class="auth-form active" id="form-signin">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="siEmail" placeholder="your@university.edu" required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <div class="password-wrap">
+            <input type="password" id="siPassword" placeholder="Enter your password" required>
+            <button type="button" class="toggle-pw">👁️</button>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit">Sign In →</button>
+        <div class="divider">or</div>
+        <p style="text-align:center;font-size:0.88rem;color:var(--text-muted);">Don't have an account? <a href="#" onclick="window.location.href='auth.html'" style="color:var(--primary);">Sign Up</a></p>
+      </form>
+      <!-- SIGN UP -->
+      <form class="auth-form" id="form-signup">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" id="suName" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label>Student ID</label>
+            <input type="text" id="suStudentId" placeholder="e.g. CS2021001">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" id="suEmail" placeholder="your@university.edu" required>
+        </div>
+        <div class="form-group">
+          <label>Department</label>
+          <select id="suDept">
+            <option value="">Select Department</option>
+            <option>Computer Science</option>
+            <option>Electronics</option>
+            <option>Mechanical</option>
+            <option>Civil</option>
+            <option>Business Administration</option>
+            <option>Arts & Humanities</option>
+            <option>Science</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Password *</label>
+            <div class="password-wrap">
+              <input type="password" id="suPassword" placeholder="Min 6 characters" required>
+              <button type="button" class="toggle-pw">👁️</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Confirm Password *</label>
+            <div class="password-wrap">
+              <input type="password" id="suPassword2" placeholder="Repeat password" required>
+              <button type="button" class="toggle-pw">👁️</button>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit">Create Account 🎉</button>
+        <div class="divider">or</div>
+        <p style="text-align:center;font-size:0.88rem;color:var(--text-muted);">Already have an account? <a href="#" onclick="window.location.href='auth.html?tab=signin'" style="color:var(--primary);">Sign In</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js?v=202604170821"></script>
+</body>
+</html>
+
